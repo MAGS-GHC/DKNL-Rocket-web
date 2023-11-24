@@ -1,0 +1,71 @@
+:root {
+    --main-bg: #353B3E;
+    --main-red: #F1999F;
+    --main-white: #ffffff;
+
+}
+
+*{
+    background-color: var(--main-bg);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--main-white);
+    margin: 0;
+}
+
+#container {
+    background-color: var(--main-bg);
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+#container .image-container {
+    width: 50%;
+    background-image: url('../assets/landingIMG.png');
+    background-size: cover;
+    background-position: center;
+}
+#container .button-container {
+    background-image: url('../assets/SVG/rocket.svg');
+    background-repeat: repeat;
+    background-size: 12.5%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container .button-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+#container .button-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+#container .button-container a button {
+    width: 100%;
+    height: 90%;
+}
+
+#container button {
+    display: flex;
+    background-color: var(--main-red);
+    color: #44282A;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 2.5rem;
+    margin: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
