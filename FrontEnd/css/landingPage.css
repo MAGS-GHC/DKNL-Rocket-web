@@ -12,19 +12,19 @@
     margin: 0;
 }
 
-#container {
+.container {
     background-color: var(--main-bg);
     display: flex;
     height: 100vh;
     width: 100vw;
 }
-#container .image-container {
+.container .image-container {
     width: 50%;
     background-image: url('../assets/landingIMG.png');
     background-size: cover;
     background-position: center;
 }
-#container .button-container {
+.container .button-container {
     background-image: url('../assets/SVG/rocket.svg');
     background-repeat: repeat;
     background-size: 12.5%;
@@ -35,7 +35,7 @@
     align-items: center;
 }
 
-#container .button-wrapper{
+.container .button-wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +43,7 @@
     width: 40%;
 }
 
-#container .button-container a {
+.container .button-container a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,12 +52,12 @@
     text-decoration: none;
 }
 
-#container .button-container a button {
+.container .button-container a button {
     width: 100%;
     height: 90%;
 }
 
-#container button {
+.container button {
     display: flex;
     background-color: var(--main-red);
     color: #44282A;
