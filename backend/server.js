@@ -39,6 +39,7 @@ mongoose
 
 mongoose.connection.once("open", () => console.log("Success to MONGODB"));
 
+
 // her får vi brugt al de data vi har i de andre filer og laver api endpoints
 // for at oprette flere, spørg kasper :D :D :D :D
 
