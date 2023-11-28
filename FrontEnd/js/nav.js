@@ -14,3 +14,15 @@ function addActiveClass(e) {
 
 // add click event listener to all links
 navLinks.forEach(link => link.addEventListener('click', addActiveClass));
+
+// Get current page URL
+let url = window.location.href;
+
+// Loop through each nav link
+navLinks.forEach((navLink) => {
+    // If the nav link matches the current URL, add the 'active' class
+    if (navLink.href === url) {
+        removeActiveClass();
+        navLink.classList.add('active');
+    }
+});

@@ -6,6 +6,8 @@
     height: 100%;
     background-color: #353B3E;
     border-radius: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .nav-container{
@@ -22,4 +24,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #99F1E1;
+    border-radius: 1rem;
+    opacity: 0.5;
+    color: #28443F;
+    font-weight: 1000;
+}
+
+.nav-link.active {
+    background-color: #99F1E1;
+    opacity: 1;
 }

@@ -6,6 +6,7 @@ async function rocketData() {
         const response = await fetch("https://dknl.onrender.com/api/rocket");
         const userData = await response.json();
         console.log(userData);
+        let lastItem = userData.length - 1;
 
         nav.innerHTML = `
         <div class="nav-container">
@@ -35,13 +36,13 @@ async function rocketData() {
         </div>
         <div class="sensorInfo">
             <p id="sensorName">Launch ID</p>
-            <p id="sensorData">${userData[0].LaunchId}</p>
+            <p id="sensorData">${userData[lastItem].LaunchId}</p>
             <p id="sensorName">Temperature</p>
-            <p id="sensorData">${userData[0].temperature}</p>
+            <p id="sensorData">${userData[lastItem].temperature}</p>
             <p id="sensorName">Top speed</p>
-            <p id="sensorData">${userData[0].topspeed}</p>
+            <p id="sensorData">${userData[lastItem].topspeed}</p>
             <p id="sensorName">Top height</p>
-            <p id="sensorData">${userData[0].topheight}</p>
+            <p id="sensorData">${userData[lastItem].topheight}</p>
         </div>
     </div>`;
 }
