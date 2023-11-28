@@ -1,3 +1,4 @@
+
 async function rocketData() {
     const nav = document.getElementById('nav');
     const grid = document.getElementById("container");
@@ -10,7 +11,7 @@ async function rocketData() {
         <div class="nav-container">
             <div class="nav-wrapper">
                 <a href="../home/index.html" class="nav-link active">Home</a>
-                <a href="../catalogue/index.html" class="nav-link">Catalogue</a>
+                <a href="../catalogue/index.html" class="nav-link">Catalogue    </a>
                 <a href="page3.html" class="nav-link">Page 3</a>
                 <a href="page4.html" class="nav-link">Page 4</a>
                 <a href="page5.html" class="nav-link">Page 5</a>
