@@ -11,7 +11,7 @@ async function rocketData() {
                 <img src="../assets/SVG/info.svg">
                 <div class="textContainer">
                     <p id="launchBool">SUCCESS</p>
-                    <p >The Launching platform is at a perfect angle, Get ready to take flight!</p>
+                    <p>The Launching platform is at a perfect angle, Get ready to take flight!</p>
                 </div>
                 </label>
             </div>   
