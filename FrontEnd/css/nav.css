@@ -1,0 +1,25 @@
+.nav-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    background-color: #353B3E;
+    border-radius: 1rem;
+}
+
+.nav-container{
+    width: 99%;
+    height: 20%;
+    margin-bottom: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    height: 4rem;
+    width: 15%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
