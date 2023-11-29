@@ -12,7 +12,7 @@ let rocketSchema = new Schema({
   topheight: { type: Number },
   topspeed: { type: Number },
   temperature: { type: Number },
-  timestamp: { type: Boolean },
+  timestamps: true,
   schemaOptions,
 });
 
