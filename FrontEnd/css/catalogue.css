@@ -133,3 +133,8 @@
     font-weight: 700;
     margin: 10px;
 }
+
+.arrow {
+    height: 15px;  /* adjust as needed */
+    /* other styles */
+}
