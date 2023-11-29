@@ -1,25 +1,20 @@
-
-
-
 async function rocketData() {
-
-    try {
-        const response = await fetch("https://dknl.onrender.com/api/rocket");
-        const userData = await response.json();
-        console.log(userData);
-        createHomeHTML(userData, 20);
-}
-    catch(error) {
-        console.log(error);
-    }
+  try {
+    const response = await fetch("https://dknl.onrender.com/api/rocket");
+    const userData = await response.json();
+    console.log(userData);
+    createHomeHTML(userData, 20);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-export function createHomeHTML(userData, index){
-    const nav = document.getElementById('nav');
-    const grid = document.getElementById("container");
-    let currentItem = userData[index];
+export function createHomeHTML(userData, index) {
+  const nav = document.getElementById("nav");
+  const grid = document.getElementById("container");
+  let currentItem = index;
 
-    nav.innerHTML = `
+  nav.innerHTML = `
     <div class="nav-container">
         <div class="nav-wrapper">
             <a href="../home/index.html" class="nav-link active">Home</a>
@@ -28,9 +23,9 @@ export function createHomeHTML(userData, index){
             <a href="../aboutUs/index.html" class="nav-link">About us</a>
             <a href="../settings/index.html" class="nav-link">Settings</a>
         </div>
-    </div>`
+    </div>`;
 
-    grid.innerHTML = `       
+  grid.innerHTML = `       
     <div class="home-container">
         <div class="pfAngle">
             <label class="infoLabel">
@@ -58,7 +53,6 @@ export function createHomeHTML(userData, index){
 </div>`;
 }
 
-window.onload = function(){
-    rocketData();
-}
-    
+window.onload = function () {
+  rocketData();
+};
