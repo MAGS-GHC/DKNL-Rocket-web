@@ -1,11 +1,8 @@
+const { Timestamp } = require("mongodb");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const schemaOptions = {
-  timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
-};
-
-let rocketSchema = new Schema({
+let rocketSchema = new mongoose.Schema({
   _id: { type: Number },
   LaunchId: { type: Number },
 
@@ -13,8 +10,16 @@ let rocketSchema = new Schema({
   topheight: { type: Number },
   topspeed: { type: Number },
   temperature: { type: Number },
-  timestamps: true,
-  schemaOptions,
+  created_at: {
+    type: Timestamp,
+    required: true,
+    default: new Date(),
+  },
+  updated_at: {
+    type: Timestamp,
+    required: true,
+    default: new Date(),
+  },
 });
 
 module.exports = mongoose.model("rocket", rocketSchema);
