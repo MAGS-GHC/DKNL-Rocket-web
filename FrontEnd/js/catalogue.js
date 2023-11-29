@@ -1,3 +1,6 @@
+let userData = [];
+let currentItem = null; 
+
 async function rocketData() {
     try {
         const response = await fetch("https://dknl.onrender.com/api/rocket");
@@ -16,7 +19,22 @@ function createCatalogueHTML(userData){
     let labels = '';
     for (let i = 0; i < userData.length; i++) {
         labels += `
-        <label class="itemLabel">${userData[i].created_at} <img src="../assets/SVG/arrow.svg" class="arrow"></label>`;
+        <label class="itemLabel">
+            ${userData[i].created_at} 
+            <div class="dropdown">
+                <img src="../assets/SVG/arrow.svg" class="arrow">
+                <div class="dropdown-content">
+                    <p id="sensorName">Launch ID</p>
+                    <p id="sensorData">${userData[i].temperature}</p>
+                    <p id="sensorName">Temperature</p>
+                    <p id="sensorData">${userData[i].temperature}</p>
+                    <p id="sensorName">Top speed</p>
+                    <p id="sensorData">${userData[i].topspeed}</p>
+                    <p id="sensorName">Top height</p>
+                    <p id="sensorData">${userData[i].topheight}</p>
+                </div>
+            </div>
+        </label>`;
     }
     nav.innerHTML = `
     <div class="nav-container">
@@ -48,6 +66,16 @@ function createCatalogueHTML(userData){
         ${labels}
     </div>
 </div>`;
+}
+
+function toggleDropdown(arrow, index) {
+    let dropdownContent = arrow.nextElementSibling;
+    if (dropdownContent.style.display === "none") {
+        dropdownContent.style.display = "block";
+    } else {
+        dropdownContent.style.display = "none";
+    }
+    currentItem = userData[index]
 }
 
 window.onload = function(){

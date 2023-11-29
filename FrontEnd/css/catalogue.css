@@ -145,3 +145,8 @@ body::-webkit-scrollbar {
   height: 35%;
   background-color: transparent;
 }
+
+.dropdown{
+  display: none;  
+  background-color: #99f1e1;
+}
