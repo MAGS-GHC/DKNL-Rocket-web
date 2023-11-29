@@ -6,8 +6,10 @@ async function rocketData() {
         const response = await fetch("https://dknl.onrender.com/api/rocket");
         const userData = await response.json();
         console.log(userData);
-        let lastItem = userData.length - 1;
-
+        let labels = '';
+        for (let i = 0; i < userData.length; i++) {
+            labels += `<label class="itemLabel">${userData[i].temperature}</label>`;
+        }
         nav.innerHTML = `
         <div class="nav-container">
             <div class="nav-wrapper">
@@ -20,7 +22,7 @@ async function rocketData() {
         </div>`
 
         grid.innerHTML = `       
-        <div class="home-container">
+        <div class="catalogue-container">
             <div class="pfAngle">
                 <label class="infoLabel">
                 <img src="../assets/SVG/info.svg">
@@ -34,15 +36,8 @@ async function rocketData() {
             <label class="infoLabel2">You are clear for lift off</label>
             <button class="launchBTN">Launch</button>
         </div>
-        <div class="sensorInfo">
-            <p id="sensorName">Launch ID</p>
-            <p id="sensorData">${userData[lastItem].LaunchId}</p>
-            <p id="sensorName">Temperature</p>
-            <p id="sensorData">${userData[lastItem].temperature}</p>
-            <p id="sensorName">Top speed</p>
-            <p id="sensorData">${userData[lastItem].topspeed}</p>
-            <p id="sensorName">Top height</p>
-            <p id="sensorData">${userData[lastItem].topheight}</p>
+        <div class="launchCatalogue">
+            ${labels}
         </div>
     </div>`;
 }
@@ -54,4 +49,3 @@ async function rocketData() {
 window.onload = function(){
     rocketData();
 }
-    
