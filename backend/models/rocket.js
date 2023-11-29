@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const Rocket = mongoose.model("Rocket", RocketSchema);
 
 // Define the Counter schema
 const CounterSchema = mongoose.Schema({
@@ -37,5 +38,4 @@ let newRocket = new Rocket({
 });
 newRocket.save();
 
-const Rocket = mongoose.model("Rocket", RocketSchema);
 module.exports = mongoose.model("rocket", rocketSchema);
