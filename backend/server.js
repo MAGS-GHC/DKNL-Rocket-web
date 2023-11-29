@@ -51,7 +51,18 @@ app.use("/api/venue", venueRoutes);
 app.use("/api/user", authRoutes);*/
 
 // holder altid øje med serveren*/
+
+
+
+
+
+
+
+
+
 app.listen(PORT, function () {
   console.log("server is running " + PORT);
 });
 module.exports = app;
+
+
