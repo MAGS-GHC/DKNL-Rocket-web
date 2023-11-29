@@ -113,7 +113,7 @@
   background-color: #353b3e;
   border-radius: 1rem;
   display: flex;
-  align-items: start;
+  align-content: flex-start;
   overflow: hidden;
   flex-wrap: wrap;
   overflow: auto;

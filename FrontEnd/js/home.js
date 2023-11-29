@@ -3,13 +3,13 @@ async function rocketData() {
     const response = await fetch("https://dknl.onrender.com/api/rocket");
     const userData = await response.json();
     console.log(userData);
-    createHomeHTML(userData, 20);
+    createHomeHTML(userData, userData.length - 1);
   } catch (error) {
     console.log(error);
   }
 }
 
-export function createHomeHTML(userData, index) {
+function createHomeHTML(userData, index) {
   const nav = document.getElementById("nav");
   const grid = document.getElementById("container");
   let currentItem = index;

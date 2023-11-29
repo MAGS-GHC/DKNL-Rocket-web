@@ -18,7 +18,8 @@ function createCatalogueHTML(userData){
     const grid = document.getElementById("container");
     let labels = '';
     for (let i = 0; i < userData.length; i++) {
-        labels += `<label class="itemLabel">${userData[i].temperature} <img src="../assets/SVG/arrow.svg" class="arrow"></label>`;
+        labels += `
+        <label class="itemLabel">${userData[i].created_at} <img src="../assets/SVG/arrow.svg" class="arrow"></label>`;
     }
     nav.innerHTML = `
     <div class="nav-container">
