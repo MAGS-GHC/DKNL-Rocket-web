@@ -121,8 +121,7 @@
 
 .itemLabel{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 10%;
     width: 95%;
@@ -132,9 +131,10 @@
     font-size: 15px;
     font-weight: 700;
     margin: 10px;
+    padding: 0px 20px;
 }
 
 .arrow {
-    height: 15px;  /* adjust as needed */
-    /* other styles */
+    height: 35%;
+    background-color: transparent;
 }

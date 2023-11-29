@@ -1,3 +1,5 @@
+import { createHomeHTML } from "../js/home.js";
+
 
 async function rocketData() {
     try {
