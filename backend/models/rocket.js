@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const schemaOptions = {
+  timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
+};
+
 let rocketSchema = new Schema({
   _id: { type: Number },
 
@@ -9,6 +13,7 @@ let rocketSchema = new Schema({
   topspeed: { type: Number },
   temperature: { type: Number },
   timestamp: { type: Boolean },
+  schemaOptions,
 });
 
 module.exports = mongoose.model("rocket", rocketSchema);
