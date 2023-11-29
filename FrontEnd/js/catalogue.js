@@ -1,6 +1,3 @@
-import { createHomeHTML } from "../js/home.js";
-
-
 async function rocketData() {
     try {
         const response = await fetch("https://dknl.onrender.com/api/rocket");
