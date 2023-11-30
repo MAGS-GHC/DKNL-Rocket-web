@@ -145,8 +145,43 @@ body::-webkit-scrollbar {
   height: 35%;
   background-color: transparent;
 }
-
-.dropdown{
-  display: none;  
+  
+.launchCatalogue.newStyle {
+  height: 97.5%;
+  width: 95%;
   background-color: #99f1e1;
+  border-radius: 1rem;
+  display: flex;
+  align-content: flex-start;
+  overflow: hidden;
+  flex-wrap: wrap;
+  overflow: auto;
+  z-index: 1;
+}
+
+.sensorInfo { 
+  grid-area: launchCatalogue; 
+  height: 97.5%;
+  width: 95%;
+  background-color: #353B3E;
+  border-radius: 1rem;
+  display: none;
+}
+
+.sensorInfo.show {
+  display: block;
+}
+
+#sensorName {
+  color: white;
+  font-size: 15px;
+  background-color: transparent;
+  margin: 1rem;
+}
+
+#sensorData {
+  color: white;
+  font-size: 40px;
+  background-color: transparent;
+  margin: 1rem;
 }

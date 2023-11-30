@@ -4,7 +4,7 @@ let currentItem = null;
 async function rocketData() {
     try {
         const response = await fetch("https://dknl.onrender.com/api/rocket");
-        const userData = await response.json();
+        userData = await response.json();
         console.log(userData);
         createCatalogueHTML(userData);
 }
@@ -17,23 +17,11 @@ function createCatalogueHTML(userData){
     const nav = document.getElementById('nav');
     const grid = document.getElementById("container");
     let labels = '';
-    for (let i = 0; i < userData.length; i++) {
+    for (let i = userData.length - 1; i >= 0 ; i--) {
         labels += `
-        <label class="itemLabel">
+        <label class="itemLabel" onclick="toggleDropdown(${i})">
             ${userData[i].created_at} 
-            <div class="dropdown">
-                <img src="../assets/SVG/arrow.svg" class="arrow">
-                <div class="dropdown-content">
-                    <p id="sensorName">Launch ID</p>
-                    <p id="sensorData">${userData[i].temperature}</p>
-                    <p id="sensorName">Temperature</p>
-                    <p id="sensorData">${userData[i].temperature}</p>
-                    <p id="sensorName">Top speed</p>
-                    <p id="sensorData">${userData[i].topspeed}</p>
-                    <p id="sensorName">Top height</p>
-                    <p id="sensorData">${userData[i].topheight}</p>
-                </div>
-            </div>
+            <img src="../assets/SVG/arrow.svg" class="arrow">
         </label>`;
     }
     nav.innerHTML = `
@@ -65,17 +53,45 @@ function createCatalogueHTML(userData){
     <div class="launchCatalogue">
         ${labels}
     </div>
+    <div class="sensorInfo">
+    </div>
+    </div>
 </div>`;
 }
 
-function toggleDropdown(arrow, index) {
-    let dropdownContent = arrow.nextElementSibling;
-    if (dropdownContent.style.display === "none") {
-        dropdownContent.style.display = "block";
-    } else {
-        dropdownContent.style.display = "none";
+function toggleDropdown(index) {
+    let launchCatalogue = document.querySelector('.launchCatalogue');
+    let sensorInfo = document.querySelector('.sensorInfo');
+
+    if (!userData || userData.length === 0) {
+        console.error('No data available');
+        return;
     }
-    currentItem = userData[index]
+
+    if (sensorInfo.style.display === "none" || sensorInfo.style.display === "") {
+        launchCatalogue.style.display = "none";
+        sensorInfo.style.display = "block";
+    } else {
+        launchCatalogue.style.display = "block";
+        sensorInfo.style.display = "none";
+    }
+
+    currentItem = userData[index];
+
+    if (currentItem) {
+    sensorInfo.innerHTML = `
+        <p id="sensorName">Launch ID</p>
+        <p id="sensorData">${currentItem.temperature}</p>
+        <p id="sensorName">Temperature</p>
+        <p id="sensorData">${currentItem.temperature}</p>
+        <p id="sensorName">Top speed</p>
+        <p id="sensorData">${currentItem.topspeed}</p>
+        <p id="sensorName">Top height</p>
+        <p id="sensorData">${currentItem.topheight}</p>
+    `;
+    } else {
+        console.error(`No data found for index ${index}`);
+    }
 }
 
 window.onload = function(){
