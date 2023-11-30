@@ -63,6 +63,14 @@ function toggleDropdown(index) {
     let launchCatalogue = document.querySelector('.launchCatalogue');
     let sensorInfo = document.querySelector('.sensorInfo');
 
+    if (index === -1) {
+        if (sensorInfo.style.display === "block") {
+            launchCatalogue.style.display = "block";
+            sensorInfo.style.display = "none";
+        }
+        return;
+    }
+
     if (!userData || userData.length === 0) {
         console.error('No data available');
         return;
@@ -72,7 +80,7 @@ function toggleDropdown(index) {
         launchCatalogue.style.display = "none";
         sensorInfo.style.display = "block";
     } else {
-        launchCatalogue.style.display = "block";
+        launchCatalogue.style.display = "flex";
         sensorInfo.style.display = "none";
     }
 
@@ -80,6 +88,7 @@ function toggleDropdown(index) {
 
     if (currentItem) {
     sensorInfo.innerHTML = `
+    <img src="../assets/SVG/arrow.svg" class="arrow" onclick="toggleDropdown(-1)">
         <p id="sensorName">Launch ID</p>
         <p id="sensorData">${currentItem.temperature}</p>
         <p id="sensorName">Temperature</p>
