@@ -1,5 +1,5 @@
 let userData = [];
-let currentItem = null; 
+let currentItem = 0; 
 
 async function rocketData() {
     try {
@@ -64,9 +64,9 @@ function toggleDropdown(index) {
     let sensorInfo = document.querySelector('.sensorInfo');
 
     if (index === -1) {
-        if (sensorInfo.style.display === "block") {
-            launchCatalogue.style.display = "block";
-            sensorInfo.style.display = "none";
+        if (sensorInfo.style.visibility === "visible") {
+            launchCatalogue.style.visibility = "visible";
+            sensorInfo.style.visibility = "hidden";
         }
         return;
     }
@@ -75,13 +75,13 @@ function toggleDropdown(index) {
         console.error('No data available');
         return;
     }
-
-    if (sensorInfo.style.display === "none" || sensorInfo.style.display === "") {
-        launchCatalogue.style.display = "none";
-        sensorInfo.style.display = "block";
+    
+    if (sensorInfo.style.visibility === "hidden" || sensorInfo.style.visibility === "") {
+        launchCatalogue.style.visibility = "hidden";
+        sensorInfo.style.visibility = "visible";
     } else {
-        launchCatalogue.style.display = "flex";
-        sensorInfo.style.display = "none";
+        launchCatalogue.style.visibility = "visible";
+        sensorInfo.style.visibility = "hidden";
     }
 
     currentItem = userData[index];

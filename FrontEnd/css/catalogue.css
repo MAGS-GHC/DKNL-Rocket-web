@@ -117,6 +117,7 @@
   overflow: hidden;
   flex-wrap: wrap;
   overflow: auto;
+  visibility: visible;
 }
 
 .launchCatalogue::-webkit-scrollbar {
@@ -166,12 +167,9 @@ body::-webkit-scrollbar {
   width: 95%;
   background-color: #353B3E;
   border-radius: 1rem;
-  display: none;
+  visibility: hidden;
 }
 
-.sensorInfo.show {
-  display: block;
-}
 
 #sensorName {
   color: white;
