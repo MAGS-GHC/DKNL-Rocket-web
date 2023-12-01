@@ -146,6 +146,14 @@ body::-webkit-scrollbar {
   height: 35%;
   background-color: transparent;
 }
+
+.sensorInfoArrow {
+  float: right;
+  color: #99f1e1;
+  height: 10%;
+  padding: 10px;
+  transform: rotate(90deg);
+}
   
 .launchCatalogue.newStyle {
   height: 97.5%;
