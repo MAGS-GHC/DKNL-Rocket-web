@@ -1,3 +1,7 @@
+*{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 .nav-wrapper{
     width: 100%;
     display: flex;
