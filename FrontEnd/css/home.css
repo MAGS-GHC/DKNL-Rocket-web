@@ -12,7 +12,7 @@
 
 .container{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
 }
 
@@ -27,6 +27,8 @@
     grid-template-areas:
       "pfAngle sensorInfo"
       "Launch sensorInfo";
+      margin-top: 2%;
+      grid-gap: 1rem;
 }
 
 .pfAngle { 
@@ -35,8 +37,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 95%;
-    width: 95%;
+    height: 100%;
+    width: 100%;
     background-color: #353B3E;
     border-radius: 1rem;
     font-size: 10px;
@@ -101,17 +103,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 95%;  
-    width: 95%;
+    height: 100%;  
+    width: 100%;
     background-color: #353B3E;
     border-radius: 1rem;
 }
-
   
 .sensorInfo { 
     grid-area: sensorInfo; 
-    height: 97.5%;
-    width: 95%;
+    height: 100%;
+    width: 100%;
     background-color: #353B3E;
     border-radius: 1rem;
 }

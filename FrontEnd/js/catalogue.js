@@ -88,7 +88,7 @@ function toggleDropdown(index) {
 
     if (currentItem) {
     sensorInfo.innerHTML = `
-    <img src="../assets/SVG/arrowBlue.svg" class="arrow sensorInfoArrow" onclick="toggleDropdown(-1)">
+    <img src="../assets/SVG/arrow.svg" class="arrow sensorInfoArrow" onclick="toggleDropdown(-1)">
         <p id="sensorName">Launch ID</p>
         <p id="sensorData">${currentItem.temperature}</p>
         <p id="sensorName">Temperature</p>
