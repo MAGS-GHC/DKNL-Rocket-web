@@ -1,11 +1,14 @@
+// Import necessary dependencies
 const rocketrouter = require("express").Router();
 const rocket = require("../models/rocket");
 
+// POST Route: Create new rocket data
 rocketrouter.post("/", (req, res) => {
-  // data er den som man indtaster fra request.body
-  data = req.body;
-  rocket
-    .insertMany(data)
+  // Extract data from the request body
+  const data = req.body;
+
+  // Insert data into the "rocket" model
+  rocket.insertMany(data)
     .then((data) => {
       res.send(data);
     })
@@ -14,11 +17,10 @@ rocketrouter.post("/", (req, res) => {
     });
 });
 
-// Indlæser data på siden  localhost:4000/api/rocket eller localhost:4000/api/sections
-//
+// GET Route: Retrieve all rocket data
 rocketrouter.get("/", (req, res) => {
-  rocket
-    .find()
+  // Find all rocket data
+  rocket.find()
     .then((data) => {
       res.send(data);
     })
@@ -27,11 +29,10 @@ rocketrouter.get("/", (req, res) => {
     });
 });
 
-// Indlæser data ved at bruge rocket.findById(req.params.id) hvor /req.params.id) er object.id i Mongodb
-// under Database --> Browse collection --> rocket/section ved hjælp af
+// GET Route: Retrieve a specific rocket by ID
 rocketrouter.get("/:id", (req, res) => {
-  rocket
-    .findById(req.params.id)
+  // Find rocket data by ID
+  rocket.findById(req.params.id)
     .then((data) => {
       res.send(data);
     })
@@ -40,48 +41,50 @@ rocketrouter.get("/:id", (req, res) => {
     });
 });
 
-//Opdatere allerede eksisterende data ved brug PUT i fx postman eller thunderclient og udflyder den samme som før men med PUT i stedet for POST
-// const id = req.params.id er indtastet til sidst i URL'en fx. localhost:4000/api/rocket/fnwdigom2ie913990qgmf
-// den finder du ved at bruge get command på localhost:4000/api/rocket/
+// PUT Route: Update existing rocket data by ID
 rocketrouter.put("/:id", (req, res) => {
+  // Extract the ID from the request parameters
   const _id = req.params.id;
 
-  rocket
-    .findByIdAndUpdate(_id, req.body)
+  // Find and update the rocket data by ID
+  rocket.findByIdAndUpdate(_id, req.body)
     .then((data) => {
+      // Check if data exists for the provided ID
       if (!data) {
-        res
-          .status(404)
-          .send({ message: "cant update, maybe id is not there" + _id });
+        res.status(404).send({ message: "Cannot update, maybe ID is not found: " + _id });
       } else {
-        res.send({ message: "update succesfull" });
+        res.send({ message: "Update successful" });
       }
     })
-
     .catch((err) => {
-      res.status(500).send({ message: "error updating with id " + _id });
+      res.status(500).send({ message: "Error updating with ID " + _id });
     });
 });
 
-// den her sletter routen eller rocket ved hjælp af den førnævnte id
+// DELETE Route: Delete a rocket by ID
 rocketrouter.delete("/:id", (req, res) => {
+  // Extract the ID from the request parameters
   const _id = req.params.id;
 
-  rocket
-    .findByIdAndDelete(_id)
+  // Find and delete the rocket data by ID
+  rocket.findByIdAndDelete(_id)
     .then((data) => {
+      // Check if data exists for the provided ID
       if (!data) {
-        res
-          .status(404)
-          .send({ message: "cant delete, maybe id is not there" + _id });
+        res.status(404).send({ message: "Cannot delete, maybe ID is not found: " + _id });
       } else {
-        res.send({ message: "delete succesfull" });
+        res.send({ message: "Delete successful" });
       }
     })
-
     .catch((err) => {
-      res.status(500).send({ message: "cannot delete   " + _id });
+      res.status(500).send({ message: "Cannot delete with ID " + _id });
     });
 });
-// exporterer
+
+// Export the router for use in other parts of the application
 module.exports = rocketrouter;
+
+
+
+
+

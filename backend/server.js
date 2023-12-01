@@ -1,11 +1,15 @@
+// Import required modules
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+
+// Create an instance of Express
 const app = express();
+
+// Load environment variables from .env file
 require("dotenv-flow").config();
 
-// en masse dependencies
-
+// Enable Cross-Origin Resource Sharing (CORS)
 const cors = require("cors");
 app.use(
   cors({
@@ -13,44 +17,34 @@ app.use(
   })
 );
 
+// Parse incoming JSON requests
 app.use(bodyParser.json());
 
+// Set the port number for the server
 const PORT = process.env.PORT || 5500;
 
-// her kommer ind i routes
+// Import routes for handling rocket-related API endpoints
 const rocketRoutes = require("../backend/routes/rocketroute");
-/*const seatrowRoutes = require("./routes/seatrow");
-const sectionRoutes = require("./routes/section");
-const venueRoutes = require("./routes/venue");
-const authRoutes = require("./routes/auth");*/
 
+// Define a simple welcome route
 app.get("/api", (req, res) => {
   res.status(200).send({ message: "Welcome to the jungle" });
 });
 
-// laver port connection
+// Connect to MongoDB using Mongoose
 mongoose
   .connect(process.env.DBHOST, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
-  // catch error
-  .catch((error) => console.log("error to db" + error));
+  .catch((error) => console.log("Error connecting to the database: " + error));
 
-mongoose.connection.once("open", () => console.log("Success to MONGODB"));
+// Log a success message once the MongoDB connection is open
+mongoose.connection.once("open", () => console.log("Successfully connected to MongoDB"));
 
-
-// her får vi brugt al de data vi har i de andre filer og laver api endpoints
-// for at oprette flere, spørg kasper :D :D :D :D
-
+// Use the defined rocket routes
 app.use("/api/rocket", rocketRoutes);
 
-/*app.use("/api/seatrows",seatrowRoutes);
-app.use("/api/sections",sectionRoutes);
-app.use("/api/venue", venueRoutes);
-app.use("/api/user", authRoutes);*/
-
-// holder altid øje med serveren*/
 
 
 
@@ -59,10 +53,15 @@ app.use("/api/user", authRoutes);*/
 
 
 
+
+
+// Start the server and listen on the specified port
 
 app.listen(PORT, function () {
-  console.log("server is running " + PORT);
+  console.log("Server is running on port " + PORT);
 });
+
+// Export the app instance for potential testing or other use
 module.exports = app;
 
 
