@@ -89,14 +89,18 @@ function toggleDropdown(index) {
     if (currentItem) {
     sensorInfo.innerHTML = `
     <img src="../assets/SVG/arrow.svg" class="arrow sensorInfoArrow" onclick="toggleDropdown(-1)">
-        <p id="sensorName">Launch ID</p>
-        <p id="sensorData">${currentItem.temperature}</p>
-        <p id="sensorName">Temperature</p>
-        <p id="sensorData">${currentItem.temperature}</p>
-        <p id="sensorName">Top speed</p>
-        <p id="sensorData">${currentItem.topspeed}</p>
-        <p id="sensorName">Top height</p>
-        <p id="sensorData">${currentItem.topheight}</p>
+    <p id="sensorName">Launch ID</p>
+    <p id="sensorData">${currentItem.launch_id}</p>
+    <p id="sensorName">Launch date</p>
+    <p id="sensorData">${currentItem.created_at}</p>
+    <p id="sensorName">Height reached</p>
+    <p id="sensorData">${currentItem.altitude}</p>
+    <p id="sensorName">Temperature</p>
+    <p id="sensorData">${currentItem.temperature}</p>
+    <p id="sensorName">Latitude change</p>
+    <p id="sensorData">${currentItem.start_latitude} - ${currentItem.end_latitude}</p>
+    <p id="sensorName">Longitude change</p>
+    <p id="sensorData">${currentItem.start_longitude} - ${currentItem.end_longitude}</p>
     `;
     } else {
         console.error(`No data found for index ${index}`);

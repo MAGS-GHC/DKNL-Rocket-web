@@ -65,11 +65,13 @@
   background-color: transparent;
   font-weight: bold;
   margin: 0;
+  color: #304428;
 }
 
 #text {
   background-color: transparent;
   margin: 0;
+  color: #304428;
 }
 
 .pfAngle img {
@@ -84,6 +86,7 @@
   background-color: #99f1e1;
   border-radius: 1rem;
   font-size: 50px;
+  color: #28443F;
 }
 
 .infoLabel2 {
@@ -94,6 +97,7 @@
   align-items: center;
   font-size: 20px;
   border-radius: 1rem;
+  color: #304428;
 }
 
 .Launch {
