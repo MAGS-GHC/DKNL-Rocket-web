@@ -7,19 +7,25 @@
 *{
     background-color: var(--main-bg);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--main-white);
+    color: var(--main-white);      
 }
 
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
 .container {
     height: 100%;
     width: 100%;
     display: flex;
+    margin-bottom: 2%;
 }
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 10px;
+    width: 100%;
 }
 
 .Headline {
