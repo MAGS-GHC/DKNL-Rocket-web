@@ -42,13 +42,17 @@ function createHomeHTML(userData, index) {
     </div>
     <div class="sensorInfo">
         <p id="sensorName">Launch ID</p>
-        <p id="sensorData">${userData[currentItem].temperature}</p>
+        <p id="sensorData">${userData[currentItem].launch_id}</p>
+        <p id="sensorName">Launch date</p>
+        <p id="sensorData">${userData[currentItem].created_at}</p>
+        <p id="sensorName">Height reached</p>
+        <p id="sensorData">${userData[currentItem].altitude}</p>
         <p id="sensorName">Temperature</p>
         <p id="sensorData">${userData[currentItem].temperature}</p>
-        <p id="sensorName">Top speed</p>
-        <p id="sensorData">${userData[currentItem].topspeed}</p>
-        <p id="sensorName">Top height</p>
-        <p id="sensorData">${userData[currentItem].topheight}</p>
+        <p id="sensorName">Latitude change</p>
+        <p id="sensorData">${userData[currentItem].start_latitude} - ${userData[currentItem].end_latitude}</p>
+        <p id="sensorName">Longitude change</p>
+        <p id="sensorData">${userData[currentItem].start_longitude} - ${userData[currentItem].end_longitude}</p>
     </div>
 </div>`;
 }
