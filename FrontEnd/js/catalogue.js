@@ -13,14 +13,29 @@ async function rocketData() {
     }
 }
 
+function formatDate(dateString) {
+    let date = new Date(dateString);
+    let day = date.getDate().toString().padStart(2, '0');
+    let month = (date.getMonth() + 1).toString().padStart(2, '0'); 
+    let year = date.getFullYear();
+    let hours = date.getHours().toString().padStart(2, '0');
+    let minutes = date.getMinutes().toString().padStart(2, '0');
+    let seconds = date.getSeconds().toString().padStart(2, '0');
+  
+    return `${day}-${month}/${year} at ${hours}:${minutes}:${seconds} GMT`;
+}
+
+
 function createCatalogueHTML(userData){
     const nav = document.getElementById('nav');
     const grid = document.getElementById("container");
     let labels = '';
     for (let i = userData.length - 1; i >= 0 ; i--) {
+        let currentItem = i;
+        let formattedDate = formatDate(userData[currentItem].created_at);
         labels += `
         <label class="itemLabel" onclick="toggleDropdown(${i})">
-            ${userData[i].created_at} 
+            ${formattedDate} 
             <img src="../assets/SVG/arrow.svg" class="arrow">
         </label>`;
     }
@@ -87,12 +102,13 @@ function toggleDropdown(index) {
     currentItem = userData[index];
 
     if (currentItem) {
+        let formattedDate = formatDate(currentItem.created_at);
     sensorInfo.innerHTML = `
     <img src="../assets/SVG/arrow.svg" class="arrow sensorInfoArrow" onclick="toggleDropdown(-1)">
     <p id="sensorName">Launch ID</p>
     <p id="sensorData">${currentItem.launch_id}</p>
     <p id="sensorName">Launch date</p>
-    <p id="sensorData">${currentItem.created_at}</p>
+    <p id="sensorData">${formattedDate}</p>
     <p id="sensorName">Height reached</p>
     <p id="sensorData">${currentItem.altitude}</p>
     <p id="sensorName">Temperature</p>
