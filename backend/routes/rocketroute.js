@@ -18,7 +18,7 @@ rocketrouter.post("/", (req, res) => {
 });
 
 // GET Route: Retrieve all rocket data
-/*rocketrouter.get("/", (req, res) => {
+rocketrouter.get("/", (req, res) => {
   // Find all rocket data
   rocket.find()
     .then((data) => {
@@ -27,8 +27,9 @@ rocketrouter.post("/", (req, res) => {
     .catch((err) => {
       res.status(500).send({ message: err.message });
     });
-});*/
-rocketrouter.get("/", async (req, res) => {
+});
+
+rocketrouter.get("/page", async (req, res) => {
   try {
     const page = req.query.page ? parseInt(req.query.page) : 1;
     const pageSize = 10;
