@@ -18,7 +18,7 @@ rocketrouter.post("/", (req, res) => {
 });
 
 // GET Route: Retrieve all rocket data
-rocketrouter.get("/", (req, res) => {
+/*rocketrouter.get("/", (req, res) => {
   // Find all rocket data
   rocket.find()
     .then((data) => {
@@ -27,6 +27,28 @@ rocketrouter.get("/", (req, res) => {
     .catch((err) => {
       res.status(500).send({ message: err.message });
     });
+});*/
+rocketrouter.get("/", async (req, res) => {
+  try {
+    const page = req.query.page ? parseInt(req.query.page) : 1;
+    const pageSize = 10;
+
+    const totalDocuments = await rocket.countDocuments({});
+    const totalPages = Math.ceil(totalDocuments / pageSize);
+
+    const documents = await rocket.find()
+      .skip((page - 1) * pageSize)
+      .limit(pageSize);
+
+    res.json({
+      data: documents,
+      currentPage: page,
+      totalPages: totalPages,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
 // GET Route: Retrieve a specific rocket by ID
