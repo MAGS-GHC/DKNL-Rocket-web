@@ -2,18 +2,6 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-:root {
-    --main-bg: #353B3E;
-    --main-red: #F1999F;
-    --main-white: #ffffff;
-}
-
-.light-theme {
-    --main-bg: #ffffff;
-    --main-red: #F1999F;
-    --main-white: #2D2F32;
-}
-
 .nav-container{
     width: 100%;
     height: 20%;
@@ -25,7 +13,7 @@
     flex-direction: row;
     justify-content: space-around;
     height: 100%;
-    background-color: var(--main-bg);
+    background-color: var(--nav-bg);
     border-radius: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;

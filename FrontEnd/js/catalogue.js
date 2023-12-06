@@ -1,3 +1,4 @@
+console.log('Script loaded'); 
 let userData = [];
 let currentItem = 0; 
 
@@ -124,5 +125,6 @@ function toggleDropdown(index) {
 }
 
 window.onload = function(){
+    console.log('Window loaded');
     rocketData();
 }
