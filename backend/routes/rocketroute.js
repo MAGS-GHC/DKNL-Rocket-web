@@ -32,7 +32,7 @@ rocketrouter.get("/", (req, res) => {
 rocketrouter.get("/page", async (req, res) => {
   try {
     const page = req.query.page ? parseInt(req.query.page) : 1;
-    const pageSize = 10;
+    const pageSize = 7;
 
     const totalDocuments = await rocket.countDocuments({});
     const totalPages = Math.ceil(totalDocuments / pageSize);
