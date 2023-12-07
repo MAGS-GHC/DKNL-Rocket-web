@@ -123,8 +123,3 @@ function toggleDropdown(index) {
         console.error(`No data found for index ${index}`);
     }
 }
-
-window.onload = function(){
-    console.log('Window loaded');
-    rocketData();
-}

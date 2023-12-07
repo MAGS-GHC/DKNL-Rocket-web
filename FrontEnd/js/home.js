@@ -66,6 +66,3 @@ function createHomeHTML(userData, index) {
 </div>`;
 }
 
-window.onload = function () {
-  rocketData();
-};
