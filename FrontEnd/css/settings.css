@@ -1,17 +1,8 @@
-:root {
-    --main-bg: #2D2F32;
-    --main-red: #F1999F;
-    --main-white: #ffffff;
-    --nav-bg: #353B3E
-
-}
-
 *{
     background-color: var(--main-bg);
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--main-white);      
 }
-
 body::-webkit-scrollbar {
     display: none;
   }

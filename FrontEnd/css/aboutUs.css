@@ -1,20 +1,8 @@
-:root {
-    --main-bg: #2D2F32;
-    --main-red: #F1999F;
-    --main-white: #ffffff;
-
-}
 *{
     background-color: var(--main-bg);
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--main-white);      
 }
-
-body.light-theme {
-    --main-bg: #ffffff;
-    --main-red: #F1999F;
-    --main-white: #2D2F32;
-  }
 
 body::-webkit-scrollbar {
     display: none;
@@ -51,7 +39,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #353B3E;
+    background-color: var(--grid-area);
     border-radius: 1.5rem;
     padding: 5%;
     text-decoration: no;
