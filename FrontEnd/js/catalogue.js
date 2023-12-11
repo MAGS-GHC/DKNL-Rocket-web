@@ -43,7 +43,7 @@ function createCatalogueHTML(userData){
         labels += `
         <label class="itemLabel" onclick="toggleDropdown(${i})">
             ${formattedDate} 
-            <img src="../assets/SVG/arrow.svg" class="arrow">
+            <img src="../assets/arrow.svg" class="arrow">
         </label>`;
     }
     nav.innerHTML = `
@@ -61,7 +61,7 @@ function createCatalogueHTML(userData){
     <div class="catalogue-container">
         <div class="pfAngle">
             <label class="infoLabel">
-            <img src="../assets/SVG/info.svg">
+            <img src="../assets/info.svg">
             <div class="textContainer">
                 <p id="launchBool">SUCCESS</p>
                 <p id="text">The Launching platform is at a perfect angle, Get ready to take flight!</p>
@@ -109,7 +109,7 @@ function toggleDropdown(index) {
     if (currentItem) {
         let formattedDate = formatDate(currentItem.created_at);
     sensorInfo.innerHTML = `
-        <img src="../assets/SVG/arrow.svg" class="arrow sensorInfoArrow" onclick="toggleDropdown(-1)">
+        <img src="../assets/arrow.svg" class="arrow sensorInfoArrow" onclick="toggleDropdown(-1)">
         <p id="sensorName">Launch ID</p>
         <p id="sensorData">${currentItem.launch_id}</p>
         <p id="sensorName">Launch date</p>
