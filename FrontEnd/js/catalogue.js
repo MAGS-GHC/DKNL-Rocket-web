@@ -6,6 +6,12 @@ async function rocketData() {
     try {
         const response = await fetch("https://dknl.onrender.com/api/rocket");
         userData = await response.json();
+
+        if (userData.length === 0) {
+        alert('No launchdata available, please launch a rocket first!');
+        return;
+        }
+
         console.log(userData);
         createCatalogueHTML(userData);
 }
@@ -112,10 +118,10 @@ function toggleDropdown(index) {
         <p id="sensorData">${currentItem.altitude}</p>
         <p id="sensorName">Temperature</p>
         <p id="sensorData">${currentItem.temperature}</p>
-        <p id="sensorName">Latitude change</p>
-        <p id="sensorData">${currentItem.start_latitude} - ${currentItem.end_latitude}</p>
-        <p id="sensorName">Longitude change</p>
-        <p id="sensorData">${currentItem.start_longitude} - ${currentItem.end_longitude}</p>`;
+        <p id="sensorName">The rocket was fire with this amount of bar:</p>
+        <p id="sensorData">${currentItem.pressure}</p>
+        <p id="sensorName">Launch direction</p>
+        <p id="sensorData">${currentItem.start_direction}</p>`;
     } else {
         console.error(`No data found for index ${index}`);
     }
