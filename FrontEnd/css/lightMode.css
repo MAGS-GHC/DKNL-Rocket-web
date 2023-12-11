@@ -1,0 +1,23 @@
+:root {
+  --main-bg: #2D2F32;
+  --main-red: #F1999F;
+  --main-white: #ffffff;
+  --nav-bg: #353B3E;
+  --nav-item: #99F1E1;
+  --main-green: #B0F199;
+  --grid-area: #353B3E;
+  --green-text: #304428;
+  --white-text: #ffffff;
+}
+
+:root.light-theme {
+    --main-bg: #ffffff;
+    --main-red: #F1999F;
+    --main-white: #2D2F32;
+    --nav-bg: #e6e6e6;
+    --nav-item: #CDCDCD;
+    --main-green: #B3B3B3;
+    --grid-area: #e6e6e6;
+    --green-text: black;
+    --white-text: black;
+  }
