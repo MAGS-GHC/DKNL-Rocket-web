@@ -13,6 +13,15 @@ function createHomeHTML(userData, index) {
   const nav = document.getElementById("nav");
   const grid = document.getElementById("container");
   let currentItem = index;
+  let date = new Date(userData[currentItem].created_at);
+  let day = date.getDate().toString().padStart(2, '0');
+  let month = (date.getMonth() + 1).toString().padStart(2, '0'); 
+  let year = date.getFullYear();
+  let hours = date.getHours().toString().padStart(2, '0');
+  let minutes = date.getMinutes().toString().padStart(2, '0');
+  let seconds = date.getSeconds().toString().padStart(2, '0');
+
+  let formattedDate = `${day}-${month}/${year} at ${hours}:${minutes}:${seconds} GMT`;
 
   nav.innerHTML = `
     <div class="nav-container">
@@ -44,7 +53,7 @@ function createHomeHTML(userData, index) {
         <p id="sensorName">Launch ID</p>
         <p id="sensorData">${userData[currentItem].launch_id}</p>
         <p id="sensorName">Launch date</p>
-        <p id="sensorData">${userData[currentItem].created_at}</p>
+        <p id="sensorData">${formattedDate}</p>
         <p id="sensorName">Height reached</p>
         <p id="sensorData">${userData[currentItem].altitude}</p>
         <p id="sensorName">Temperature</p>
@@ -57,6 +66,3 @@ function createHomeHTML(userData, index) {
 </div>`;
 }
 
-window.onload = function () {
-  rocketData();
-};

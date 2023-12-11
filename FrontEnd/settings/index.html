@@ -12,14 +12,15 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../css/settings.css">
     <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/lightMode.css">
 
     <!-- JS -->
-    <script src="../js/settings.js"></script>
-    <script src="../js/nav.js"></script>
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/lightMode.js" defer></script>
 
 
 </head>
-<body>
+<body onload="colorThemeFunction()">
     <div id="nav-container" class="nav">
         <div class="nav-wrapper">
             <a href="../home/index.html" class="nav-link">Home</a>
