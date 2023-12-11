@@ -2,6 +2,12 @@ async function rocketData() {
   try {
     const response = await fetch("https://dknl.onrender.com/api/rocket");
     const userData = await response.json();
+    
+    if (userData.length === 0) {
+      alert('No launchdata available, please launch a rocket first!');
+      return;
+    }
+
     console.log(userData);
     createHomeHTML(userData, userData.length - 1);
   } catch (error) {
@@ -58,10 +64,10 @@ function createHomeHTML(userData, index) {
         <p id="sensorData">${userData[currentItem].altitude}</p>
         <p id="sensorName">Temperature</p>
         <p id="sensorData">${userData[currentItem].temperature}</p>
-        <p id="sensorName">Latitude change</p>
-        <p id="sensorData">${userData[currentItem].start_latitude} - ${userData[currentItem].end_latitude}</p>
-        <p id="sensorName">Longitude change</p>
-        <p id="sensorData">${userData[currentItem].start_longitude} - ${userData[currentItem].end_longitude}</p>
+        <p id="sensorName">The rocket was fire with this amount of bar:</p>
+        <p id="sensorData">${userData[currentItem].pressure}</p>
+        <p id="sensorName">launch direction</p>
+        <p id="sensorData">${userData[currentItem].start_direction}</p>
     </div>
 </div>`;
 }
