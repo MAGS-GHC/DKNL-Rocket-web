@@ -44,7 +44,7 @@ function createHomeHTML(userData, index) {
     <div class="home-container">
         <div class="pfAngle">
             <label class="infoLabel">
-            <img src="../assets/SVG/info.svg">
+            <img src="../assets/info.svg">
             <div class="textContainer">
                 <p id="launchBool">SUCCESS</p>
                 <p id="text">The Launching platform is at a perfect angle, Get ready to take flight!</p>
