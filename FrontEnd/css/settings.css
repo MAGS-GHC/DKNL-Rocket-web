@@ -3,6 +3,11 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--main-white);      
 }
+
+body {
+  display: none;
+}
+
 body::-webkit-scrollbar {
     display: none;
   }

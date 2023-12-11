@@ -4,6 +4,10 @@
     color: var(--main-white);
 }
 
+body {
+    display: none;
+}
+
 body::-webkit-scrollbar {
     display: none;
   }  
