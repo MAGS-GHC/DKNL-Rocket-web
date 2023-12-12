@@ -2,6 +2,7 @@ console.log('Script loaded');
 let userData = [];
 let currentItem = 0; 
 
+/*here i am fetching data from the database's api*/
 async function rocketData() {
     try {
         const response = await fetch("https://dknl.onrender.com/api/rocket");
@@ -19,7 +20,7 @@ async function rocketData() {
         console.log(error);
     }
 }
-
+/*here i am making a function, to rearrange how the date of the launch is displayet on screen*/
 function formatDate(dateString) {
     let date = new Date(dateString);
     let day = date.getDate().toString().padStart(2, '0');
@@ -32,7 +33,7 @@ function formatDate(dateString) {
     return `${day}-${month}/${year} at ${hours}:${minutes}:${seconds} GMT`;
 }
 
-
+/*i am making the html for the page "catalogue.html"*/
 function createCatalogueHTML(userData){
     const nav = document.getElementById('nav');
     const grid = document.getElementById("container");
@@ -46,6 +47,7 @@ function createCatalogueHTML(userData){
             <img src="../assets/arrow.svg" class="arrow">
         </label>`;
     }
+/*in here, i am adding my html, to the "nav" div i made in the html page.*/
     nav.innerHTML = `
     <div class="nav-container">
         <div class="nav-wrapper">
@@ -56,7 +58,7 @@ function createCatalogueHTML(userData){
             <a href="../settings/index.html" class="nav-link">Settings</a>
         </div>
     </div>`
-
+/*in here, i am adding my html, to the "container" div i made in the html page.*/ 
     grid.innerHTML = `       
     <div class="catalogue-container">
         <div class="pfAngle">

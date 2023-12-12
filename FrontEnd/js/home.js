@@ -28,7 +28,8 @@ function createHomeHTML(userData, index) {
   let seconds = date.getSeconds().toString().padStart(2, '0');
 
   let formattedDate = `${day}-${month}/${year} at ${hours}:${minutes}:${seconds} GMT`;
-
+  
+/*here i make the html for the nav bar*/
   nav.innerHTML = `
     <div class="nav-container">
         <div class="nav-wrapper">
@@ -40,6 +41,7 @@ function createHomeHTML(userData, index) {
         </div>
     </div>`;
 
+/*here i make the content to be in the "container" div, where the data from the latest launch is displayed.*/
   grid.innerHTML = `       
     <div class="home-container">
         <div class="pfAngle">

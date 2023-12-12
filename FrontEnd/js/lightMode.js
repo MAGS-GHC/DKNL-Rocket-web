@@ -6,6 +6,8 @@ function colorThemeFunction() {
         document.documentElement.classList.add(savedTheme);
     }
 
+//here i am making a function that saves the theme in the local storage, so that when the user refreshes the page, it wont go back to the default "darktheme".
+
     const checkbox = document.getElementById('checkbox');
     const themeToggleText = document.querySelector('.themeChangeText');
     if (checkbox) {
