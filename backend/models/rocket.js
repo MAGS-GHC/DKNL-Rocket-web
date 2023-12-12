@@ -7,8 +7,7 @@ let rocketSchema = new Schema({
   altitude: { type: Number }, 
   temperature: { type: Number },
   pressure: {type :Number },
-  start_direction: {type: Number},
-  end_direction: {type: Number},
+  direction: {type: Number},
   created_at: {
     type: Date,
     required: true,
