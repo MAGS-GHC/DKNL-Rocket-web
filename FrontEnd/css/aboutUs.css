@@ -4,6 +4,10 @@
     color: var(--main-white);      
 }
 
+body {
+    display: none;
+}
+
 body::-webkit-scrollbar {
     display: none;
   }
@@ -18,7 +22,7 @@ body::-webkit-scrollbar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    gap: 10px;
+    gap: 30px;
     width: 100%;
 }
 
@@ -33,20 +37,40 @@ body::-webkit-scrollbar {
     padding: 1%;
 }
 
-.Nassef, .Abrar, .Job, .Albert, .Søren, .Calle {
+.Nassef, .Abrar, .Job, .Albert{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--grid-area);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../assets/netherlandsFlag.png');
+    background-size: cover;
     border-radius: 1.5rem;
     padding: 5%;
-    text-decoration: no;
+}
+
+.Søren, .Calle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../assets/denmarkFlag.png');
+    background-size: cover;
+    border-radius: 1.5rem;
+    padding: 5%;
 }
 
 .Nassef p, .Abrar p, .Job p, .Albert p, .Søren p, .Calle p {
-    background-color: transparent;
+    background-color: var(--main-bg);
+    border: 2px solid var(--nav-bg);
+    padding: 10px;
+    border-radius: 1rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .profileIMG {
@@ -54,6 +78,7 @@ body::-webkit-scrollbar {
     height: auto;
     object-fit: cover;
     border-radius: 11rem;
+    margin-bottom: 5%;
 }
 
 .headlineIMG {
@@ -62,4 +87,5 @@ body::-webkit-scrollbar {
     object-fit: cover;
     border-radius: 50rem;
 }
+
   

@@ -2,10 +2,17 @@ console.log('Script loaded');
 let userData = [];
 let currentItem = 0; 
 
+/*here i am fetching data from the database's api*/
 async function rocketData() {
     try {
         const response = await fetch("https://dknl.onrender.com/api/rocket");
         userData = await response.json();
+
+        if (userData.length === 0) {
+        alert('No launchdata available, please launch a rocket first!');
+        return;
+        }
+
         console.log(userData);
         createCatalogueHTML(userData);
 }
@@ -13,7 +20,7 @@ async function rocketData() {
         console.log(error);
     }
 }
-
+/*here i am making a function, to rearrange how the date of the launch is displayet on screen*/
 function formatDate(dateString) {
     let date = new Date(dateString);
     let day = date.getDate().toString().padStart(2, '0');
@@ -26,7 +33,7 @@ function formatDate(dateString) {
     return `${day}-${month}/${year} at ${hours}:${minutes}:${seconds} GMT`;
 }
 
-
+/*i am making the html for the page "catalogue.html"*/
 function createCatalogueHTML(userData){
     const nav = document.getElementById('nav');
     const grid = document.getElementById("container");
@@ -37,9 +44,10 @@ function createCatalogueHTML(userData){
         labels += `
         <label class="itemLabel" onclick="toggleDropdown(${i})">
             ${formattedDate} 
-            <img src="../assets/SVG/arrow.svg" class="arrow">
+            <img src="../assets/arrow.svg" class="arrow">
         </label>`;
     }
+/*in here, i am adding my html, to the "nav" div i made in the html page.*/
     nav.innerHTML = `
     <div class="nav-container">
         <div class="nav-wrapper">
@@ -50,12 +58,12 @@ function createCatalogueHTML(userData){
             <a href="../settings/index.html" class="nav-link">Settings</a>
         </div>
     </div>`
-
+/*in here, i am adding my html, to the "container" div i made in the html page.*/ 
     grid.innerHTML = `       
     <div class="catalogue-container">
         <div class="pfAngle">
             <label class="infoLabel">
-            <img src="../assets/SVG/info.svg">
+            <img src="../assets/info.svg">
             <div class="textContainer">
                 <p id="launchBool">SUCCESS</p>
                 <p id="text">The Launching platform is at a perfect angle, Get ready to take flight!</p>
@@ -103,7 +111,7 @@ function toggleDropdown(index) {
     if (currentItem) {
         let formattedDate = formatDate(currentItem.created_at);
     sensorInfo.innerHTML = `
-        <img src="../assets/SVG/arrow.svg" class="arrow sensorInfoArrow" onclick="toggleDropdown(-1)">
+        <img src="../assets/arrow.svg" class="arrow sensorInfoArrow" onclick="toggleDropdown(-1)">
         <p id="sensorName">Launch ID</p>
         <p id="sensorData">${currentItem.launch_id}</p>
         <p id="sensorName">Launch date</p>
@@ -112,10 +120,10 @@ function toggleDropdown(index) {
         <p id="sensorData">${currentItem.altitude}</p>
         <p id="sensorName">Temperature</p>
         <p id="sensorData">${currentItem.temperature}</p>
-        <p id="sensorName">Latitude change</p>
-        <p id="sensorData">${currentItem.start_latitude} - ${currentItem.end_latitude}</p>
-        <p id="sensorName">Longitude change</p>
-        <p id="sensorData">${currentItem.start_longitude} - ${currentItem.end_longitude}</p>`;
+        <p id="sensorName">The rocket was fire with this amount of bar:</p>
+        <p id="sensorData">${currentItem.pressure}</p>
+        <p id="sensorName">Launch direction</p>
+        <p id="sensorData">${currentItem.start_direction}</p>`;
     } else {
         console.error(`No data found for index ${index}`);
     }

@@ -6,7 +6,6 @@
 }
 
 *{
-    background-color: var(--main-bg);
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--main-white);
     margin: 0;
@@ -25,14 +24,26 @@
     background-position: center;
 }
 .container .button-container {
-    background-image: url('../assets/SVG/rocket.svg');
+    background-image: url('../assets/rocket.svg');
     background-repeat: repeat;
     background-size: 12.5%;
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.companyName {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    width: 95%;
+    text-align: center;
+}
+
+.companyName h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 .container .button-wrapper{
@@ -40,7 +51,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 50%;
 }
 
 .container .button-container a {
