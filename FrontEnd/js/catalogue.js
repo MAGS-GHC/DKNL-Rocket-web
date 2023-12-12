@@ -81,6 +81,7 @@ function createCatalogueHTML(userData){
     </div>`;
 }
 
+/*here i make a dropdown, where i can display the data of the specific launch i want.*/
 function toggleDropdown(index) {
     let launchCatalogue = document.querySelector('.launchCatalogue');
     let sensorInfo = document.querySelector('.sensorInfo');
