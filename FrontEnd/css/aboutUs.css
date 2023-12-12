@@ -43,7 +43,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url('../assets/netherlandsFlag.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../assets/netherlandsFlag.png');
     background-size: cover;
     border-radius: 1.5rem;
     padding: 5%;
@@ -55,7 +55,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url('../assets/denmarkFlag.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../assets/denmarkFlag.png');
     background-size: cover;
     border-radius: 1.5rem;
     padding: 5%;
