@@ -82,7 +82,7 @@ body::-webkit-scrollbar {
 }
 
 .headlineIMG {
-    width: 10%;
+    width: 15%;
     height: auto;
     object-fit: cover;
     border-radius: 50rem;

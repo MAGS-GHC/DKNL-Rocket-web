@@ -124,7 +124,7 @@ function toggleDropdown(index) {
         <p id="sensorName">The rocket was fire with this amount of bar:</p>
         <p id="sensorData">${currentItem.pressure}</p>
         <p id="sensorName">Launch direction</p>
-        <p id="sensorData">${currentItem.start_direction}</p>`;
+        <p id="sensorData">${currentItem.direction}</p>`;
     } else {
         console.error(`No data found for index ${index}`);
     }

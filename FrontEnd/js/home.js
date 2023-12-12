@@ -69,7 +69,7 @@ function createHomeHTML(userData, index) {
         <p id="sensorName">The rocket was fire with this amount of bar:</p>
         <p id="sensorData">${userData[currentItem].pressure}</p>
         <p id="sensorName">launch direction</p>
-        <p id="sensorData">${userData[currentItem].start_direction}</p>
+        <p id="sensorData">${userData[currentItem].direction}</p>
     </div>
 </div>`;
 }
