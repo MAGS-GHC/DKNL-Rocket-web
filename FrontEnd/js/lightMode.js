@@ -1,6 +1,7 @@
 function colorThemeFunction() {
     const savedTheme = localStorage.getItem('theme');
     const savedCheckboxState = localStorage.getItem('checkbox') === 'true';
+    const headlineIMG = document.querySelector('.headlineIMG');
 
     if (savedTheme) {
         document.documentElement.classList.add(savedTheme);
