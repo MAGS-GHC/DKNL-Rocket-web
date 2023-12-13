@@ -140,12 +140,11 @@ body::-webkit-scrollbar {
 
 .sensors {
     background-color: transparent;
-    padding: 2rem 0;
 }
 
 .specsInfoHeadline {
     color: var(--white-text);
-    font-size: 1.25rem;
+    font-size: 2.5rem;
     background-color: transparent;
     margin: 1rem;
     font-weight: bold;
@@ -153,7 +152,7 @@ body::-webkit-scrollbar {
 
 .specsInfo {
     color: var(--white-text);
-    font-size: 1rem;
+    font-size: 1.5rem;
     background-color: transparent;
     margin: 1rem;
 }
