@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    gap: 30px;
+    gap: 3rem;
     width: 100%;
 }
 
@@ -35,6 +35,7 @@ body::-webkit-scrollbar {
     align-items: center;
     text-align: center;
     padding: 1%;
+    font-size: 1.5rem;
 }
 
 .Nassef, .Abrar, .Job, .Albert{
@@ -64,7 +65,7 @@ body::-webkit-scrollbar {
 .Nassef p, .Abrar p, .Job p, .Albert p, .Søren p, .Calle p {
     background-color: var(--main-bg);
     border: 2px solid var(--nav-bg);
-    padding: 10px;
+    padding: 1rem;
     border-radius: 1rem;
     height: 2rem;
     display: flex;

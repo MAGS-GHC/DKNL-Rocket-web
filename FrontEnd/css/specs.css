@@ -43,7 +43,7 @@ body::-webkit-scrollbar {
     width: 100%;
     background-color: var(--grid-area);
     border-radius: 1rem;
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 .pfAngle .infoLabel{
@@ -52,7 +52,7 @@ body::-webkit-scrollbar {
     background-color: var(--main-green);
     display: flex;
     align-items: center;
-    font-size: 10px;
+    font-size: 0.75rem;
     border-radius: 1rem;
     text-decoration: none;
     
@@ -65,7 +65,7 @@ body::-webkit-scrollbar {
 }
 
 #launchBool{
-    font-size: 15px;
+    font-size: 1rem;
     background-color: transparent;
     font-weight: bold;
     margin: 0;
@@ -89,7 +89,7 @@ body::-webkit-scrollbar {
     margin: 4%;
     background-color: var(--nav-item);
     border-radius: 1rem;
-    font-size: 50px;
+    font-size: 4rem;
     color: var(--green-text);
 }
 
@@ -101,7 +101,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 1rem;
     border-radius: 1rem;
     color: var(--green-text);
 }
@@ -128,14 +128,14 @@ body::-webkit-scrollbar {
 
 .specsHeadline {
     color: var(--white-text);
-    font-size: 40px;
+    font-size: 4rem;
     background-color: transparent;
     margin: 1rem;
 }
 
 #specsInfo {
     color: var(--white-text);
-    font-size: 15px;
+    font-size: 2rem;
     background-color: transparent;
     margin: 1rem;
 }
