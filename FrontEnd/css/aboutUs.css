@@ -40,6 +40,7 @@ body::-webkit-scrollbar {
 
 .Nassef, .Abrar, .Job, .Albert{
     display: flex;
+    border: 5px solid var(--nav-bg);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -52,6 +53,7 @@ body::-webkit-scrollbar {
 
 .Søren, .Calle {
     display: flex;
+    border: 5px solid var(--nav-bg);
     flex-direction: column;
     justify-content: center;
     align-items: center;
