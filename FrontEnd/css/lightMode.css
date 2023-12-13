@@ -8,16 +8,18 @@
   --grid-area: #353B3E;
   --green-text: #304428;
   --white-text: #ffffff;
+  --logo: url("../images/logo.png");
 }
 
 :root.light-theme {
-    --main-bg: #ffffff;
-    --main-red: #F1999F;
-    --main-white: #2D2F32;
-    --nav-bg: #e6e6e6;
-    --nav-item: #CDCDCD;
-    --main-green: #B3B3B3;
-    --grid-area: #e6e6e6;
-    --green-text: black;
-    --white-text: black;
-  }
+  --main-bg: #ffffff;
+  --main-red: #F1999F;
+  --main-white: #2D2F32;
+  --nav-bg: #e6e6e6;
+  --nav-item: #CDCDCD;
+  --main-green: #B3B3B3;
+  --grid-area: #e6e6e6;
+  --green-text: black;
+  --white-text: black;
+  --logo: url("../images/logoLight.png");
+}
