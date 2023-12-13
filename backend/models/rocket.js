@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 let rocketSchema = new Schema({
   
-  launch_id: { type: Number },
+  launch_id: { type: String },
   altitude: { type: Number }, 
   temperature: { type: Number },
   pressure: {type :Number },
