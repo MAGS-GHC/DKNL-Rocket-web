@@ -121,7 +121,7 @@ function toggleDropdown(index) {
         <p id="sensorData">${currentItem.altitude}</p>
         <p id="sensorName">Temperature</p>
         <p id="sensorData">${currentItem.temperature}</p>
-        <p id="sensorName">The rocket was fire with this amount of bar:</p>
+        <p id="sensorName">The rocket was fired with this amount of bar:</p>
         <p id="sensorData">${currentItem.pressure}</p>
         <p id="sensorName">Launch direction</p>
         <p id="sensorData">${currentItem.direction}</p>`;

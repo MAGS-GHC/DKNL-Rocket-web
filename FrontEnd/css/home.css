@@ -62,7 +62,7 @@ body::-webkit-scrollbar {
 }
 
 #launchBool{
-    font-size: 15px;
+    font-size: 1rem;
     background-color: transparent;
     font-weight: bold;
     margin: 0;
@@ -98,7 +98,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.75rem;
     border-radius: 1rem;
     color: var(--green-text);
 }

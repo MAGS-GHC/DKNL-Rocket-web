@@ -66,7 +66,7 @@ function createHomeHTML(userData, index) {
         <p id="sensorData">${userData[currentItem].altitude}</p>
         <p id="sensorName">Temperature</p>
         <p id="sensorData">${userData[currentItem].temperature}</p>
-        <p id="sensorName">The rocket was fire with this amount of bar:</p>
+        <p id="sensorName">The rocket was fired with this amount of bar:</p>
         <p id="sensorData">${userData[currentItem].pressure}</p>
         <p id="sensorName">launch direction</p>
         <p id="sensorData">${userData[currentItem].direction}</p>

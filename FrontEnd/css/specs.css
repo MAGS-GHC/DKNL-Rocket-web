@@ -101,7 +101,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.75rem;
     border-radius: 1rem;
     color: var(--green-text);
 }
@@ -133,9 +133,27 @@ body::-webkit-scrollbar {
     margin: 1rem;
 }
 
-#specsInfo {
+.modules {
+    background-color: transparent;
+    padding: 2rem 0;
+}
+
+.sensors {
+    background-color: transparent;
+    padding: 2rem 0;
+}
+
+.specsInfoHeadline {
     color: var(--white-text);
-    font-size: 2rem;
+    font-size: 1.25rem;
+    background-color: transparent;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+.specsInfo {
+    color: var(--white-text);
+    font-size: 1rem;
     background-color: transparent;
     margin: 1rem;
 }

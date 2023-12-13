@@ -8,7 +8,6 @@
   --grid-area: #353B3E;
   --green-text: #304428;
   --white-text: #ffffff;
-  --logo: url("../images/logo.png");
 }
 
 :root.light-theme {
@@ -21,5 +20,4 @@
   --grid-area: #e6e6e6;
   --green-text: black;
   --white-text: black;
-  --logo: url("../images/logoLight.png");
 }
