@@ -19,7 +19,7 @@
 }
 .container .image-container {
     width: 50%;
-    background-image: url('assets/landingIMG.png');
+    background-image: url('assets/landingIMG.WebP');
     background-size: cover;
     background-position: center;
 }
