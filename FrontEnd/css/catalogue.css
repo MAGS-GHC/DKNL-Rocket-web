@@ -1,0 +1,190 @@
+* {
+  background-color: var(--main-bg);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--main-white);
+}
+
+body {
+  display: none;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.catalogue-container {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr;
+  grid-template-rows: 1.5fr 1.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "pfAngle launchCatalogue"
+    "Launch launchCatalogue";
+  margin-top: 2%;
+  grid-gap: 1rem;
+}
+
+.pfAngle {
+  grid-area: pfAngle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--grid-area);
+  border-radius: 1rem;
+  font-size: 10px;
+}
+
+.pfAngle .infoLabel {
+  height: 20%;
+  width: 90%;
+  background-color: var(--main-green);
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+.textContainer {
+  background-color: var(--main-green);
+  margin: 0;
+}
+
+#launchBool {
+  font-size: 1rem;
+  background-color: transparent;
+  font-weight: bold;
+  margin: 0;
+  color: var(--green-text);
+}
+
+#text {
+  background-color: transparent;
+  margin: 0;
+  color: var(--green-text);
+}
+
+.pfAngle img {
+  margin: 20px;
+  background-color: transparent;
+}
+
+.launchBTN {
+  height: 50%;
+  width: 90%;
+  margin: 4%;
+  background-color: var(--nav-item);
+  border-radius: 1rem;
+  font-size: 4rem;
+  color: var(--green-text);
+}
+
+.infoLabel2 {
+  height: 20%;
+  width: 90%;
+  background-color: var(--main-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  border-radius: 1rem;
+  color: var(--green-text);
+}
+
+.Launch {
+  grid-area: Launch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--grid-area);
+  border-radius: 1rem;
+}
+
+.launchCatalogue {
+  grid-area: launchCatalogue;
+  height: 100%;
+  width: 100%;
+  background-color: var(--grid-area);
+  border-radius: 1rem;
+  display: flex;
+  align-content: flex-start;
+  overflow: hidden;
+  flex-wrap: wrap;
+  overflow: auto;
+  visibility: visible;
+}
+
+.launchCatalogue::-webkit-scrollbar {
+  display: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.itemLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  width: 100%;
+  background-color: var(--nav-item);
+  color: var(--green-text);
+  border-radius: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem;
+  padding: 0rem 1rem;
+  transition: transform 0.5s ease;
+}
+
+.itemLabel:hover {
+  transform: scale(1.01);
+}
+
+.arrow {
+  height: 35%;
+  background-color: transparent;
+}
+
+.sensorInfoArrow {
+  float: right;
+  color: var(--nav-item);
+  height: 10%;
+  padding: 0.75rem;
+  transform: rotate(90deg);
+}
+
+
+.sensorInfo { 
+  grid-area: launchCatalogue; 
+  height: 100%;
+  width: 100%;
+  background-color: var(--nav-item);
+  border-radius: 1rem;
+  visibility: hidden;
+}
+
+#sensorName {
+  color: var(--green-text);
+  font-size: 1.5rem;
+  background-color: transparent;
+  margin: 0.5rem;
+}
+
+#sensorData {
+  color: var(--green-text);
+  font-size: 3rem;
+  background-color: transparent;
+  margin: 0.5rem;
+}
