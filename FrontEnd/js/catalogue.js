@@ -114,7 +114,7 @@ function toggleDropdown(index) {
     sensorInfo.innerHTML = `
         <img src="../assets/arrow.svg" class="arrow sensorInfoArrow" onclick="toggleDropdown(-1)">
         <p id="sensorName">Launch ID</p>
-        <p id="sensorData">${currentItem.launch_id}</p>
+        <p id="sensorData">${currentItem.launch_id ? currentItem.launch_id : 'No Launch ID available'}</p>
         <p id="sensorName">Launch date</p>
         <p id="sensorData">${formattedDate}</p>
         <p id="sensorName">Height reached</p>
