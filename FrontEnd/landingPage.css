@@ -66,6 +66,7 @@
 .container .button-container a button {
     width: 100%;
     height: 90%;
+    transition: transform 0.5s ease;
 }
 
 .container button {
@@ -80,3 +81,7 @@
     align-items: center;
 }
 
+.container .button-container a button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
