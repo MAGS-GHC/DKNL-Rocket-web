@@ -58,18 +58,18 @@ function createHomeHTML(userData, index) {
         <button class="launchBTN">Launch</button>
     </div>
     <div class="sensorInfo">
-        <p id="sensorName">Launch ID</p>
+        <p id="sensorName">Launch ID:</p>
         <p id="sensorData">${currentItem.launch_id ? currentItem.launch_id : 'No Launch ID available'}</p>
-        <p id="sensorName">Launch date</p>
+        <p id="sensorName">Launch date:</p>
         <p id="sensorData">${formattedDate}</p>
-        <p id="sensorName">Height reached</p>
-        <p id="sensorData">${userData[currentItem].altitude}</p>
-        <p id="sensorName">Temperature</p>
-        <p id="sensorData">${userData[currentItem].temperature}</p>
-        <p id="sensorName">The rocket was fired with this amount of bar:</p>
-        <p id="sensorData">${userData[currentItem].pressure}</p>
-        <p id="sensorName">launch direction</p>
-        <p id="sensorData">${userData[currentItem].direction}</p>
+        <p id="sensorName">Height reached:</p>
+        <p id="sensorData">${userData[currentItem].altitude} m above sea level.</p>
+        <p id="sensorName">Temperature around the device is:</p>
+        <p id="sensorData">${userData[currentItem].temperature} °C</p>
+        <p id="sensorName">The pressure inside the tank is:</p>
+        <p id="sensorData">${userData[currentItem].pressure * 0.001} Bar</p>
+        <p id="sensorName">The rocket was fired at this angle:</p>
+        <p id="sensorData">${userData[currentItem].direction} °</p>
     </div>
 </div>`;
 }

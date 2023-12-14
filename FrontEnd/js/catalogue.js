@@ -113,18 +113,18 @@ function toggleDropdown(index) {
         let formattedDate = formatDate(currentItem.created_at);
     sensorInfo.innerHTML = `
         <img src="../assets/arrow.svg" class="arrow sensorInfoArrow" onclick="toggleDropdown(-1)">
-        <p id="sensorName">Launch ID</p>
+        <p id="sensorName">Launch ID:</p>
         <p id="sensorData">${currentItem.launch_id ? currentItem.launch_id : 'No Launch ID available'}</p>
-        <p id="sensorName">Launch date</p>
+        <p id="sensorName">Launch date:</p>
         <p id="sensorData">${formattedDate}</p>
-        <p id="sensorName">Height reached</p>
-        <p id="sensorData">${currentItem.altitude}</p>
-        <p id="sensorName">Temperature</p>
-        <p id="sensorData">${currentItem.temperature}</p>
-        <p id="sensorName">The rocket was fired with this amount of bar:</p>
-        <p id="sensorData">${currentItem.pressure}</p>
-        <p id="sensorName">Launch direction</p>
-        <p id="sensorData">${currentItem.direction}</p>`;
+        <p id="sensorName">Height reached:</p>
+        <p id="sensorData">${currentItem.altitude} m above sea level.</p>
+        <p id="sensorName">The temperature around the device is:</p>
+        <p id="sensorData">${currentItem.temperature} °C</p>
+        <p id="sensorName">The pressure inside the rocket top is:</p>
+        <p id="sensorData">${currentItem.pressure * 0.001} Bar</p>
+        <p id="sensorName">The rocket was fired at this angle:</p>
+        <p id="sensorData">${currentItem.direction} °</p>`;
     } else {
         console.error(`No data found for index ${index}`);
     }
