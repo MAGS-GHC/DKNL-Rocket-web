@@ -177,14 +177,14 @@ body::-webkit-scrollbar {
 
 #sensorName {
   color: var(--green-text);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   background-color: transparent;
   margin: 0.5rem;
 }
 
 #sensorData {
   color: var(--green-text);
-  font-size: 3rem;
+  font-size: 2.5rem;
   background-color: transparent;
   margin: 0.5rem;
 }

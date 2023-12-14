@@ -130,7 +130,7 @@ body::-webkit-scrollbar {
     color: var(--white-text);
     font-size: 4rem;
     background-color: transparent;
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
 .modules {
@@ -146,7 +146,7 @@ body::-webkit-scrollbar {
     color: var(--white-text);
     font-size: 2.5rem;
     background-color: transparent;
-    margin: 1rem;
+    margin: 0.5rem;
     font-weight: bold;
 }
 
@@ -154,5 +154,5 @@ body::-webkit-scrollbar {
     color: var(--white-text);
     font-size: 1.5rem;
     background-color: transparent;
-    margin: 1rem;
+    margin: 0.5rem;
 }
